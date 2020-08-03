@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class UsernameValidationTest extends TestCase
 {
-    public function test_return_false_when_user_name_lt_min_length_is_valid_test()
+    public function test_return_false_when_user_name_lt_min_length()
     {
         $sut = new UsernameValidation;
 
@@ -17,7 +17,7 @@ class UsernameValidationTest extends TestCase
         $this->assertEquals('Minimum length is 1', $sut->getMessage());
     }
 
-    public function test_return_false_when_user_name_gt_max_length_is_valid_test()
+    public function test_return_false_when_user_name_gt_max_length()
     {
         $sut = new UsernameValidation;
 
@@ -27,7 +27,7 @@ class UsernameValidationTest extends TestCase
         $this->assertEquals('Maximum length is 20', $sut->getMessage());
     }
 
-    public function test_return_false_when_user_name_not_allow_dash_begin_or_end_is_valid_test()
+    public function test_return_false_when_user_name_not_allow_dash_begin_or_end()
     {
         $sut = new UsernameValidation;
 
@@ -37,7 +37,7 @@ class UsernameValidationTest extends TestCase
         $this->assertEquals('- cannot appear at begin or end of name', $sut->getMessage());
     }
 
-    public function test_return_false_when_user_name_not_allow_double_dash_is_valid_test()
+    public function test_return_false_when_user_name_not_allow_double_dash()
     {
         $sut = new UsernameValidation;
 
@@ -47,7 +47,7 @@ class UsernameValidationTest extends TestCase
         $this->assertEquals('Only single - is allowed', $sut->getMessage());
     }
 
-    public function test_return_false_when_user_name_not_allow_invalid_character_is_valid_test()
+    public function test_return_false_when_user_name_not_allow_invalid_character()
     {
         $sut = new UsernameValidation;
 
@@ -57,7 +57,7 @@ class UsernameValidationTest extends TestCase
         $this->assertEquals('Invalid character. Use only letters, digits and -', $sut->getMessage());
     }
 
-    public function test_return_true_when_user_name_valid_is_valid_test()
+    public function test_return_true_when_user_name_valid()
     {
         $sut = new UsernameValidation;
 

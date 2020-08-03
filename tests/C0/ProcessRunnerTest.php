@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class ProcessRunnerTest extends TestCase
 {
-    public function test_return_2_WHEN_pass_case_1_case_3_run_test()
+    public function test_return_2_WHEN_pass_case_1_case_3()
     {
         $sut = new ProcessRunner;
 
@@ -21,7 +21,7 @@ class ProcessRunnerTest extends TestCase
         $this->assertFalse($sut->wasProcess4Called());
     }
 
-    public function test_return_2_WHEN_pass_case_2_case_4_run_test()
+    public function test_return_2_WHEN_pass_case_2_case_4()
     {
         $sut = new ProcessRunner;
 
